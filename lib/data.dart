@@ -53,21 +53,21 @@ class DataProvider with ChangeNotifier {
                     context,
                     "Safety Leadership Program (BP)",
                     Image.asset(
-                      'assets/certificates/SSLC2.png',
+                      'assets/certificates/sslc2.png',
                     ),
                   ),
                   certificateOnTouchAlert(
                     context,
                     "Vision Hazard Identification",
                     Image.asset(
-                      'assets/certificates/VHIC.png',
+                      'assets/certificates/vhic.png',
                     ),
                   ),
                   certificateOnTouchAlert(
                     context,
                     "Basic Offshore Safety Induction and Emergency Training (OPITO)",
                     Image.asset(
-                      'assets/certificates/BOSIET.png',
+                      'assets/certificates/bosiet.png',
                     ),
                   ),
                   AdaptiveText("Behavioral Safety Observation (BP)"),
@@ -95,35 +95,35 @@ class DataProvider with ChangeNotifier {
                           context,
                           "Full BP Challange Drilling Engineer package trainings, such as:",
                           Image.asset(
-                            'assets/certificates/GlobalChallange.png',
+                            'assets/certificates/globalchallange.png',
                           ),
                         ),
                         certificateOnTouchAlert(
                           context,
                           "Drilling Engineering and Well Planning",
                           Image.asset(
-                            'assets/certificates/DEandWP.png',
+                            'assets/certificates/deandwp.png',
                           ),
                         ),
                         certificateOnTouchAlert(
                           context,
                           "Drilling Engineering Practices",
                           Image.asset(
-                            'assets/certificates/DrPrac.png',
+                            'assets/certificates/drprac.png',
                           ),
                         ),
                         certificateOnTouchAlert(
                           context,
                           "Drill string Design and Failure Prevention",
                           Image.asset(
-                            'assets/certificates/DSD.png',
+                            'assets/certificates/dsd.png',
                           ),
                         ),
                         certificateOnTouchAlert(
                           context,
                           "Decision Making and Cost forecasting",
                           Image.asset(
-                            'assets/certificates/DMandCF.png',
+                            'assets/certificates/dmandcf.png',
                           ),
                         ),
                         certificateOnTouchAlert(
@@ -137,14 +137,14 @@ class DataProvider with ChangeNotifier {
                           context,
                           "Directional Drilling",
                           Image.asset(
-                            'assets/certificates/DD.png',
+                            'assets/certificates/dd.png',
                           ),
                         ),
                         certificateOnTouchAlert(
                           context,
                           "Introduction to Drilling and Completion",
                           Image.asset(
-                            'assets/certificates/introDEandCE.png',
+                            'assets/certificates/introdeandce.png',
                           ),
                         ),
                         AdaptiveText("Basic Drilling Fluids"),
@@ -208,7 +208,9 @@ class DataProvider with ChangeNotifier {
                     "Work in collaboration with Equinor on KPS-4 well Drilling Ops\nWork on finalization of Drilling Facilities SOR\nPreparation for Drilling Rig Tender",
                   )),
               InformationParagraph(
-                  Image.asset('assets/img/socar.png'),
+                  Image.asset(
+                    'assets/img/socar.png',
+                  ),
                   AdaptiveText("SOCAR"),
                   Column(children: [
                     workExperience(
@@ -384,8 +386,10 @@ Widget certificateOnTouchAlert(
                   if (url != null) launch(url);
                 },
                 child: AdaptiveText(certificateName)),
-            content:
-                SingleChildScrollView(child: InteractiveViewer(child: image)),
+            content: Stack(children: [
+              Center(child: CircularProgressIndicator()),
+              SingleChildScrollView(child: InteractiveViewer(child: image)),
+            ]),
             actions: <Widget>[
               TextButton(
                 child: const Text('Ok'),
