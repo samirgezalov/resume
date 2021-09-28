@@ -91,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         .openOrCloseAll();
                     // });
                   }),
+              // child: AnimatedSwitcher(child:),
             ),
             Tooltip(
               message: "Save As Image",

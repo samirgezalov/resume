@@ -1,8 +1,8 @@
-import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:resume/generated/l10n.dart';
 import 'package:resume/theme/materialvscupertino.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DataProvider with ChangeNotifier {
   bool isExpanded = true;
@@ -46,80 +46,144 @@ class DataProvider with ChangeNotifier {
             isLeveled: true,
             list: [
               InformationParagraph(
-                  Image.asset('assets/img/safety.png'),
-                  AdaptiveText(S.of(context).safety),
+                Image.asset('assets/img/safety.png'),
+                AdaptiveText(S.of(context).safety),
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  certificateOnTouchAlert(
+                    context,
+                    "Safety Leadership Program (BP)",
+                    Image.asset(
+                      'assets/certificates/SSLC2.png',
+                    ),
+                  ),
+                  certificateOnTouchAlert(
+                    context,
+                    "Vision Hazard Identification",
+                    Image.asset(
+                      'assets/certificates/VHIC.png',
+                    ),
+                  ),
+                  certificateOnTouchAlert(
+                    context,
+                    "Basic Offshore Safety Induction and Emergency Training (OPITO)",
+                    Image.asset(
+                      'assets/certificates/BOSIET.png',
+                    ),
+                  ),
+                  AdaptiveText("Behavioral Safety Observation (BP)"),
                   AdaptiveText(
-                      "Safety Leadership Program (BP)\nVision Hazard Identification\nBehavioral Safety Observation (BP)\nBasic Offshore Safety Induction and Emergency Training (OPITO)\nFire Fighting and First Aid (BP)")),
+                    "Fire Fighting and First Aid (BP)",
+                  ),
+                ]),
+                // AdaptiveText(
+                //     "Safety Leadership Program (BP)\nVision Hazard Identification\nBehavioral Safety Observation (BP)\nBasic Offshore Safety Induction and Emergency Training (OPITO)\nFire Fighting and First Aid (BP)"),
+              ),
               InformationParagraph(
                   Image.asset('assets/img/drill.png'),
                   AdaptiveText(S.of(context).drilling),
-                  AdaptiveText(
-                      "Drilling and Risk Management (NEXT)\nFull BP Challange Drilling Engineer package trainings, such as:\nK&M ERD course\nDrilling Engineering and Well Planning\nDrilling Engineering Practices\nDrill string Design and Failure Prevention\nDecision Making and Cost forecasting\nBasic Drilling Fluids\nCasing Design\nCementing\nIADC (Well CAP) Well Control Supervisors certificate for Surface/Subsea system")),
+                  Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        certificateOnTouchAlert(
+                          context,
+                          "Drilling and Risk Management (NEXT)",
+                          Image.asset(
+                            'assets/certificates/next.png',
+                          ),
+                        ),
+                        certificateOnTouchAlert(
+                          context,
+                          "Full BP Challange Drilling Engineer package trainings, such as:",
+                          Image.asset(
+                            'assets/certificates/GlobalChallange.png',
+                          ),
+                        ),
+                        certificateOnTouchAlert(
+                          context,
+                          "Drilling Engineering and Well Planning",
+                          Image.asset(
+                            'assets/certificates/DEandWP.png',
+                          ),
+                        ),
+                        certificateOnTouchAlert(
+                          context,
+                          "Drilling Engineering Practices",
+                          Image.asset(
+                            'assets/certificates/DrPrac.png',
+                          ),
+                        ),
+                        certificateOnTouchAlert(
+                          context,
+                          "Drill string Design and Failure Prevention",
+                          Image.asset(
+                            'assets/certificates/DSD.png',
+                          ),
+                        ),
+                        certificateOnTouchAlert(
+                          context,
+                          "Decision Making and Cost forecasting",
+                          Image.asset(
+                            'assets/certificates/DMandCF.png',
+                          ),
+                        ),
+                        certificateOnTouchAlert(
+                          context,
+                          "IADC (Well CAP) Well Control Supervisors certificate for Surface/Subsea system",
+                          Image.asset(
+                            'assets/certificates/wellcap.png',
+                          ),
+                        ),
+                        certificateOnTouchAlert(
+                          context,
+                          "Directional Drilling",
+                          Image.asset(
+                            'assets/certificates/DD.png',
+                          ),
+                        ),
+                        certificateOnTouchAlert(
+                          context,
+                          "Introduction to Drilling and Completion",
+                          Image.asset(
+                            'assets/certificates/introDEandCE.png',
+                          ),
+                        ),
+                        AdaptiveText("Basic Drilling Fluids"),
+                        AdaptiveText("Casing Design"),
+                        AdaptiveText("Cementing"),
+                      ])),
               InformationParagraph(
                   Image.asset('assets/img/dev.png'),
                   AdaptiveText(S.of(context).development),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      TextButton(
-                          onPressed: () {
-                            showDialog<void>(
-                              context: context,
-                              barrierDismissible: true, // user must tap button!
-                              builder: (BuildContext context) {
-                                return AlertDialog(
-                                  title: const Text('AlertDialog Title'),
-                                  content: SingleChildScrollView(
-                                    child: InteractiveViewer(
-                                      child: Image.asset(
-                                          'assets/img/nrpti-mlzSk.jpg'),
-                                    ),
-                                  ),
-                                  actions: <Widget>[
-                                    TextButton(
-                                      child: const Text('Approve'),
-                                      onPressed: () {
-                                        Navigator.of(context).pop();
-                                      },
-                                    ),
-                                  ],
-                                );
-                              },
-                            );
-                          },
-                          child: AdaptiveText(
-                              "Android разработка - с нуля до профессионала. Полный курс")),
-                      TextButton(
-                          onPressed: () {
-                            showDialog<void>(
-                              context: context,
-                              barrierDismissible:
-                                  false, // user must tap button!
-                              builder: (BuildContext context) {
-                                return AlertDialog(
-                                  title: const Text('AlertDialog Title'),
-                                  content: SingleChildScrollView(
-                                    child: ListBody(
-                                      children: const <Widget>[
-                                        Text('This is a demo alert dialog.'),
-                                        Text(
-                                            'Would you like to approve of this message?'),
-                                      ],
-                                    ),
-                                  ),
-                                  actions: <Widget>[
-                                    TextButton(
-                                      child: const Text('Approve'),
-                                      onPressed: () {
-                                        Navigator.of(context).pop();
-                                      },
-                                    ),
-                                  ],
-                                );
-                              },
-                            );
-                          },
-                          child: AdaptiveText(
-                              "Flutter Certified Application Developer (ATCW10000205)"))
+                      certificateOnTouchAlert(
+                          context,
+                          "Flutter Certified Application Developer (ID: ATCW10000205)",
+                          Image.asset(
+                            'assets/certificates/flutterdev.png',
+                          ),
+                          url: "https://www.androidatc.com/_transcript.php"),
+                      certificateOnTouchAlert(
+                        context,
+                        "Android разработка - с нуля до профессионала. Полный курс",
+                        Image.asset(
+                          'assets/certificates/android.jpg',
+                        ),
+                        url:
+                            "https://www.udemy.com/certificate/UC-ceb367ad-d1cb-478c-a262-ac8e5a8f6893/",
+                      ),
+                      certificateOnTouchAlert(
+                        context,
+                        "Java (Джава) для начинающих: с нуля до сертификата Oracle",
+                        Image.asset(
+                          'assets/certificates/java.jpg',
+                        ),
+                        url: "https://www.udemy.com/certificate/UC-G6FP5VN9/",
+                      ),
+                      AdaptiveText("Flutter & Dart - The Complete Guide"),
+                      AdaptiveText(
+                          "STEPit Academy - Java / JavaScript / HTML / CSS / JQuery / MS SQL / native Android Dev"),
                     ],
                   )
                   // AdaptiveText(
@@ -261,24 +325,24 @@ class DataProvider with ChangeNotifier {
         AdaptiveText(
           dates,
           // style: Theme.of(context).textTheme.headline5,
-          style: AdaptiveTheme.of(context).theme.textTheme.headline5,
-          textScaleFactor: MediaQuery.of(context).textScaleFactor * 0.5,
+          // style: AdaptiveTheme.of(context).theme.textTheme.headline5,
+          textScaleFactor: MediaQuery.of(context).textScaleFactor * 0.75,
         ),
         AdaptiveText(
           position,
           // style: Theme.of(context).textTheme.headline4,
-          style: AdaptiveTheme.of(context).theme.textTheme.headline4,
+          // style: AdaptiveTheme.of(context).theme.textTheme.headline4,
 
-          textScaleFactor: MediaQuery.of(context).textScaleFactor * 0.5,
+          textScaleFactor: MediaQuery.of(context).textScaleFactor * 0.75,
         ),
         AdaptiveText(
           asset,
-          style: Theme.of(context).textTheme.headline5,
-          textScaleFactor: MediaQuery.of(context).textScaleFactor * 0.5,
+          // style: Theme.of(context).textTheme.headline5,
+          textScaleFactor: MediaQuery.of(context).textScaleFactor * 0.75,
         ),
         AdaptiveText(
           data,
-          style: Theme.of(context).textTheme.bodyText1,
+          // style: Theme.of(context).textTheme.bodyText1,
           textScaleFactor: MediaQuery.of(context).textScaleFactor,
         )
       ]),
@@ -303,4 +367,37 @@ class InformationParagraph {
 // get isOpen {
 //   return _isOpen;
 // }
+}
+
+Widget certificateOnTouchAlert(
+    BuildContext context, String certificateName, Image image,
+    {String url}) {
+  return TextButton(
+    onPressed: () {
+      showDialog<void>(
+        context: context,
+        barrierDismissible: true,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: TextButton(
+                onPressed: () {
+                  if (url != null) launch(url);
+                },
+                child: AdaptiveText(certificateName)),
+            content:
+                SingleChildScrollView(child: InteractiveViewer(child: image)),
+            actions: <Widget>[
+              TextButton(
+                child: const Text('Ok'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    },
+    child: AdaptiveText(certificateName),
+  );
 }

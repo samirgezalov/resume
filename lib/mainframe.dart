@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'generated/l10n.dart';
 
@@ -14,10 +15,10 @@ class Mainframe extends StatelessWidget {
                 onTap: () {
                   showDialog<void>(
                     context: context,
-                    barrierDismissible: true, // user must tap button!
+                    barrierDismissible: true,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: const Text('AlertDialog Title'),
+                        // title: const Text('AlertDialog Title'),
                         content: SingleChildScrollView(
                           child: InteractiveViewer(
                             child: Image.asset('assets/img/sam.png'),
@@ -25,7 +26,7 @@ class Mainframe extends StatelessWidget {
                         ),
                         actions: <Widget>[
                           TextButton(
-                            child: const Text('Approve'),
+                            child: const Text('Ok'),
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
@@ -39,10 +40,22 @@ class Mainframe extends StatelessWidget {
         textMain(context, S.of(context).name),
         textMain(context, S.of(context).position),
         Divider(),
-        rowIconAndData(context, Image.asset('assets/icons/cell.png'),
-            textMain(context, S.of(context).cell)),
-        rowIconAndData(context, Image.asset('assets/icons/email.png'),
-            textMain(context, S.of(context).email)),
+        rowIconAndData(
+            context,
+            Image.asset('assets/icons/cell.png'),
+            TextButton(
+                onPressed: () {
+                  launch('tel:${S.of(context).cell}');
+                },
+                child: textMain(context, S.of(context).cell))),
+        rowIconAndData(
+            context,
+            Image.asset('assets/icons/email.png'),
+            TextButton(
+                onPressed: () {
+                  launch('mailto:${S.of(context).email}');
+                },
+                child: textMain(context, S.of(context).email))),
         rowIconAndData(context, Image.asset('assets/icons/based.png'),
             textMain(context, S.of(context).location)),
         rowIconAndData(context, Image.asset('assets/icons/born.png'),
