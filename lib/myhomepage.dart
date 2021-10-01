@@ -12,6 +12,7 @@ import 'package:resume/data.dart';
 import 'package:resume/generated/l10n.dart';
 import 'package:resume/mainframe.dart';
 import 'package:resume/secondaryframe.dart';
+import 'package:resume/theme/materialvscupertino.dart';
 import 'package:screenshot/screenshot.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -30,13 +31,26 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   ScreenshotController screenshotController = ScreenshotController();
   var safeArea;
+  var _animationController;
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<DataProvider>(context);
     provider.dataPopulate(context);
+    _animationController ??=
+        AnimationController(vsync: this, duration: Duration(seconds: 3))
+          ..repeat();
 
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -47,9 +61,21 @@ class _MyHomePageState extends State<MyHomePage> {
     safeArea = SafeArea(
       child: Scaffold(
           appBar: AppBar(
+            leading: Align(
+              alignment: Alignment.bottomLeft,
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: AdaptiveText(
+                  "updated 29.09.21",
+                  textScaleFactor: 0.67,
+                ),
+              ),
+            ),
             // Here we take the value from the MyHomePage object that was created by
             // the App.build method, and use it to set our appbar title.
-            title: Text('${S.of(context).resume}: ${S.of(context).name}'),
+            title: Text(
+              '${S.of(context).resume}: ${S.of(context).name}',
+            ),
           ),
           body: SingleChildScrollView(
             child: Screenshot(
@@ -96,7 +122,10 @@ class _MyHomePageState extends State<MyHomePage> {
             Tooltip(
               message: "Save As Image",
               child: IconButton(
-                icon: Icon(Icons.camera),
+                icon: RotationTransition(
+                    turns: _animationController,
+                    alignment: Alignment.center,
+                    child: Icon(Icons.camera)),
                 onPressed: () {
                   screenshotController
                       .capture(delay: Duration(milliseconds: 10))

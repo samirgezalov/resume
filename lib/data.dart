@@ -198,6 +198,15 @@ class DataProvider with ChangeNotifier {
             isLeveled: true,
             list: [
               InformationParagraph(
+                  Image.asset('assets/img/safarico.png'),
+                  AdaptiveText("SaFariCo"),
+                  workExperience(
+                      context,
+                      "2020.9 - now",
+                      "Dart / Flutter Developer",
+                      "SaFariCo app",
+                      'Develop startup online app with backend from scratch.\nCreated backend solution using PostgreSQL & Conduit (Aqueduct).\nSuccessfully Develop from scratch new complex application which had following capabilities :\nRegister user, with cell number confirmation & OAuth 2.0.\nAllow user to select and store locations.\nStore user data on server.\nUser data sync with device.\nUser calendar with extended features.\nMulti language interface and features, syncronized with server db and with easy way to add languages without need of renewing app version solution.\netc')),
+              InformationParagraph(
                   Image.asset('assets/img/koc.png'),
                   AdaptiveText("Karabakh Operating Company"),
                   workExperience(
@@ -388,7 +397,9 @@ Widget certificateOnTouchAlert(
                 child: AdaptiveText(certificateName)),
             content: Stack(children: [
               Center(child: CircularProgressIndicator()),
-              SingleChildScrollView(child: InteractiveViewer(child: image)),
+              Center(
+                  child: SingleChildScrollView(
+                      child: InteractiveViewer(child: image))),
             ]),
             actions: <Widget>[
               TextButton(
