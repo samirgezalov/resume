@@ -28,6 +28,7 @@ class _MyAppState extends State<MyApp> {
         dark: darkThemeDefault,
         initial: AdaptiveThemeMode.dark,
         builder: (theme, darkTheme) => MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Resume',
           localizationsDelegates: [
             S.delegate,

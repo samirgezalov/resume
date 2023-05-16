@@ -33,21 +33,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "hobby" : MessageLookupByLibrary.simpleMessage("Hobby"),
     "hobbyData" : MessageLookupByLibrary.simpleMessage("Technology\nPhilosofy\nGaming\nSpending Time with friends"),
     "honors" : MessageLookupByLibrary.simpleMessage("Honors / Achievements"),
-    "honorsData" : MessageLookupByLibrary.simpleMessage("Creating Daily reporting system for BEOC Drilling Team, which was capable of replacing High cost analog (~300k year cheapest) and was ahead on performance on the analog, this was done by me volunteerly and BEOC always used it as main Reporting Tool. \nSuccessfully killed Well on well control situation (2 cases) on exploration well on Gum Deniz.\nJoined BEOC when they had no Drilling team and no any kind of drilling practices/procedures. Was one of 2 persons creating all from zero, and successfully implemented system in BEOC.\nCreated fully operational application from scratch on flutter for Android/iOS/Web. Created backend for same application on Aqueduct (Conduit) + PostgreSQL. Registered, configured server on Ubuntu for same backend framework and get it work properly all together."),
-    "location" : MessageLookupByLibrary.simpleMessage("Baku, Azerbaijan"),
-    "marital" : MessageLookupByLibrary.simpleMessage("Single"),
-    "name" : MessageLookupByLibrary.simpleMessage("Samir Gozalov"),
-    "position" : MessageLookupByLibrary.simpleMessage("Flutter Developer"),
-    "resume" : MessageLookupByLibrary.simpleMessage("Resume"),
-    "safety" : MessageLookupByLibrary.simpleMessage("Safety"),
-    "selfEvaluation" : MessageLookupByLibrary.simpleMessage("Self Evaluation"),
-    "selfEvaluationData" : MessageLookupByLibrary.simpleMessage("Temper Positive and Optimistic \nCheerful \nHonest and trustworthy \nWilling to help others \nResponsible \nWith a strong team spirit and strong ability to work \nNonPro Skills Good PC management knowledge, good overall IT knowledge \nLanguage Russian, English, Azeri, all fluent"),
-    "skills" : MessageLookupByLibrary.simpleMessage("Skills"),
-    "skillsData" : MessageLookupByLibrary.simpleMessage("Flutter\nDart\nConduit (ex Aqueduct Dart serverside framework)\nJavaScript\nES6\nTypeScript\nHTML5\nCSS\nXML\nYAML\nOOP\njQuery\nFirebase\nGit\nMicrosoft SQL\nPostgreSQL\nUbuntu\nApache2\nJSON\nKotlin\nRxJS\nJava\nMS Office"),
-    "status" : MessageLookupByLibrary.simpleMessage("Current Status"),
-    "statusData" : MessageLookupByLibrary.simpleMessage("Currently looking for Development / Consulting job opportunities for Flutter / Dart crossplatform applications, preferably with utilising my past Drilling experience."),
-    "tmp" : MessageLookupByLibrary.simpleMessage(""),
-    "trainings" : MessageLookupByLibrary.simpleMessage("Trainings"),
-    "workExperience" : MessageLookupByLibrary.simpleMessage("Work Experience")
-  };
+        "honorsData": MessageLookupByLibrary.simpleMessage(
+            "Creating Daily reporting system for BEOC Drilling Team, which was capable of replacing High cost analog (~300k year cheapest) and was ahead on performance on the analog, this was done by me volunteerly and BEOC always used it as main Reporting Tool. \nSuccessfully killed Well on well control situation (2 cases) on exploration well on Gum Deniz.\nJoined BEOC when they had no Drilling team and no any kind of drilling practices/procedures. Was one of 2 persons creating all from zero, and successfully implemented system in BEOC.\nCreated fully operational application from scratch on flutter for Android/iOS/Web. Created backend for same application on Aqueduct (Conduit) + PostgreSQL. Registered, configured server on Ubuntu for same backend framework and get it work properly all together."),
+        "location": MessageLookupByLibrary.simpleMessage("Baku, Azerbaijan"),
+        "marital": MessageLookupByLibrary.simpleMessage("Single"),
+        "name": MessageLookupByLibrary.simpleMessage("Samir Gozalov"),
+        "position": MessageLookupByLibrary.simpleMessage("Flutter Developer"),
+        "resume": MessageLookupByLibrary.simpleMessage("Resume"),
+        "safety": MessageLookupByLibrary.simpleMessage("Safety"),
+        "selfEvaluation": MessageLookupByLibrary.simpleMessage("Self Evaluation"),
+        "selfEvaluationData": MessageLookupByLibrary.simpleMessage(
+            "Temper Positive and Optimistic \nCheerful \nHonest and trustworthy \nWilling to help others \nResponsible \nWith a strong team spirit and strong ability to work \nNonPro Skills Good PC management knowledge, good overall IT knowledge \nLanguage Russian, English, Azeri, all fluent"),
+        "skills": MessageLookupByLibrary.simpleMessage("Skills"),
+        "skillsData": MessageLookupByLibrary.simpleMessage(
+            "Flutter\nDart\nConduit (ex Aqueduct Dart serverside framework)\nAutoroute\nGraphQL\nFirebase\nRetrofit\nFreezed\nProvider\nRiverpod\nMWWM\nElementary\nLinter\nAnalitycs\nJavaScript\nES6\nTypeScript\nHTML5\nCSS\nXML\nYAML\nOOP\njQuery\nGit\nMicrosoft SQL\nPostgreSQL\nUbuntu\nApache2\nJSON\nKotlin\nRxJS\nJava\nMS Office"),
+        "status": MessageLookupByLibrary.simpleMessage("Current Status"),
+        "statusData": MessageLookupByLibrary.simpleMessage(
+            "Currently looking for Development / Consulting job opportunities for Flutter / Dart crossplatform applications."),
+        "tmp": MessageLookupByLibrary.simpleMessage(""),
+        "trainings": MessageLookupByLibrary.simpleMessage("Trainings"),
+        "workExperience": MessageLookupByLibrary.simpleMessage("Work Experience")
+      };
 }

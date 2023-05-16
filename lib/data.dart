@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:resume/generated/l10n.dart';
 import 'package:resume/theme/materialvscupertino.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -7,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 class DataProvider with ChangeNotifier {
   bool isExpanded = true;
   List<InformationParagraph> _items;
+
 // getItems(BuildContext context) {
 //   if (_items == null) dataPopulate(context);
 //   return _items;
@@ -15,33 +15,19 @@ class DataProvider with ChangeNotifier {
   void dataPopulate(BuildContext context) {
     if (_items == null)
       _items = [
-        InformationParagraph(
-            Image.asset('assets/icons/status.png'),
-            AdaptiveText(S.of(context).status),
+        InformationParagraph(Image.asset('assets/icons/status.png'), AdaptiveText(S.of(context).status),
             AdaptiveText(S.of(context).statusData)),
-        InformationParagraph(
-            Image.asset('assets/icons/personalassesment.png'),
-            AdaptiveText(S.of(context).selfEvaluation),
-            AdaptiveText(S.of(context).selfEvaluationData)),
-        InformationParagraph(
-            Image.asset('assets/icons/hobby.png'),
-            AdaptiveText(S.of(context).hobby),
+        InformationParagraph(Image.asset('assets/icons/personalassesment.png'),
+            AdaptiveText(S.of(context).selfEvaluation), AdaptiveText(S.of(context).selfEvaluationData)),
+        InformationParagraph(Image.asset('assets/icons/hobby.png'), AdaptiveText(S.of(context).hobby),
             AdaptiveText(S.of(context).hobbyData)),
-        InformationParagraph(
-            Image.asset('assets/icons/skills.png'),
-            AdaptiveText(S.of(context).skills),
+        InformationParagraph(Image.asset('assets/icons/skills.png'), AdaptiveText(S.of(context).skills),
             AdaptiveText(S.of(context).skillsData)),
-        InformationParagraph(
-            Image.asset('assets/icons/drillingsoftware.png'),
-            AdaptiveText(S.of(context).drillingSoft),
+        InformationParagraph(Image.asset('assets/icons/drillingsoftware.png'), AdaptiveText(S.of(context).drillingSoft),
             AdaptiveText(S.of(context).drillingSoftData)),
-        InformationParagraph(
-            Image.asset('assets/icons/achievement.png'),
-            AdaptiveText(S.of(context).honors),
+        InformationParagraph(Image.asset('assets/icons/achievement.png'), AdaptiveText(S.of(context).honors),
             AdaptiveText(S.of(context).honorsData)),
-        InformationParagraph(
-            Image.asset('assets/icons/training.png'),
-            AdaptiveText(S.of(context).trainings),
+        InformationParagraph(Image.asset('assets/icons/training.png'), AdaptiveText(S.of(context).trainings),
             AdaptiveText(S.of(context).trainings),
             isLeveled: true,
             list: [
@@ -81,76 +67,74 @@ class DataProvider with ChangeNotifier {
               InformationParagraph(
                   Image.asset('assets/img/drill.png'),
                   AdaptiveText(S.of(context).drilling),
-                  Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        certificateOnTouchAlert(
-                          context,
-                          "Drilling and Risk Management (NEXT)",
-                          Image.asset(
-                            'assets/certificates/next.png',
-                          ),
-                        ),
-                        certificateOnTouchAlert(
-                          context,
-                          "Full BP Challange Drilling Engineer package trainings, such as:",
-                          Image.asset(
-                            'assets/certificates/globalchallange.png',
-                          ),
-                        ),
-                        certificateOnTouchAlert(
-                          context,
-                          "Drilling Engineering and Well Planning",
-                          Image.asset(
-                            'assets/certificates/deandwp.png',
-                          ),
-                        ),
-                        certificateOnTouchAlert(
-                          context,
-                          "Drilling Engineering Practices",
-                          Image.asset(
-                            'assets/certificates/drprac.png',
-                          ),
-                        ),
-                        certificateOnTouchAlert(
-                          context,
-                          "Drill string Design and Failure Prevention",
-                          Image.asset(
-                            'assets/certificates/dsd.png',
-                          ),
-                        ),
-                        certificateOnTouchAlert(
-                          context,
-                          "Decision Making and Cost forecasting",
-                          Image.asset(
-                            'assets/certificates/dmandcf.png',
-                          ),
-                        ),
-                        certificateOnTouchAlert(
-                          context,
-                          "IADC (Well CAP) Well Control Supervisors certificate for Surface/Subsea system",
-                          Image.asset(
-                            'assets/certificates/wellcap.png',
-                          ),
-                        ),
-                        certificateOnTouchAlert(
-                          context,
-                          "Directional Drilling",
-                          Image.asset(
-                            'assets/certificates/dd.png',
-                          ),
-                        ),
-                        certificateOnTouchAlert(
-                          context,
-                          "Introduction to Drilling and Completion",
-                          Image.asset(
-                            'assets/certificates/introdeandce.png',
-                          ),
-                        ),
-                        AdaptiveText("Basic Drilling Fluids"),
-                        AdaptiveText("Casing Design"),
-                        AdaptiveText("Cementing"),
-                      ])),
+                  Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    certificateOnTouchAlert(
+                      context,
+                      "Drilling and Risk Management (NEXT)",
+                      Image.asset(
+                        'assets/certificates/next.png',
+                      ),
+                    ),
+                    certificateOnTouchAlert(
+                      context,
+                      "Full BP Challange Drilling Engineer package trainings, such as:",
+                      Image.asset(
+                        'assets/certificates/globalchallange.png',
+                      ),
+                    ),
+                    certificateOnTouchAlert(
+                      context,
+                      "Drilling Engineering and Well Planning",
+                      Image.asset(
+                        'assets/certificates/deandwp.png',
+                      ),
+                    ),
+                    certificateOnTouchAlert(
+                      context,
+                      "Drilling Engineering Practices",
+                      Image.asset(
+                        'assets/certificates/drprac.png',
+                      ),
+                    ),
+                    certificateOnTouchAlert(
+                      context,
+                      "Drill string Design and Failure Prevention",
+                      Image.asset(
+                        'assets/certificates/dsd.png',
+                      ),
+                    ),
+                    certificateOnTouchAlert(
+                      context,
+                      "Decision Making and Cost forecasting",
+                      Image.asset(
+                        'assets/certificates/dmandcf.png',
+                      ),
+                    ),
+                    certificateOnTouchAlert(
+                      context,
+                      "IADC (Well CAP) Well Control Supervisors certificate for Surface/Subsea system",
+                      Image.asset(
+                        'assets/certificates/wellcap.png',
+                      ),
+                    ),
+                    certificateOnTouchAlert(
+                      context,
+                      "Directional Drilling",
+                      Image.asset(
+                        'assets/certificates/dd.png',
+                      ),
+                    ),
+                    certificateOnTouchAlert(
+                      context,
+                      "Introduction to Drilling and Completion",
+                      Image.asset(
+                        'assets/certificates/introdeandce.png',
+                      ),
+                    ),
+                    AdaptiveText("Basic Drilling Fluids"),
+                    AdaptiveText("Casing Design"),
+                    AdaptiveText("Cementing"),
+                  ])),
               InformationParagraph(
                   Image.asset('assets/img/dev.png'),
                   AdaptiveText(S.of(context).development),
@@ -170,8 +154,7 @@ class DataProvider with ChangeNotifier {
                         Image.asset(
                           'assets/certificates/android.jpg',
                         ),
-                        url:
-                            "https://www.udemy.com/certificate/UC-ceb367ad-d1cb-478c-a262-ac8e5a8f6893/",
+                        url: "https://www.udemy.com/certificate/UC-ceb367ad-d1cb-478c-a262-ac8e5a8f6893/",
                       ),
                       certificateOnTouchAlert(
                         context,
@@ -191,20 +174,24 @@ class DataProvider with ChangeNotifier {
                   // ),
                   ),
             ]),
-        InformationParagraph(
-            Image.asset('assets/icons/workexperience.png'),
-            AdaptiveText(S.of(context).workExperience),
+        InformationParagraph(Image.asset('assets/icons/workexperience.png'), AdaptiveText(S.of(context).workExperience),
             AdaptiveText(S.of(context).workExperience),
             isLeveled: true,
             list: [
               InformationParagraph(
+                  Image.asset('assets/img/surflight.jpeg'),
+                  AdaptiveText("SURF"),
+                  workExperience(
+                    context,
+                    "2021.10 - 2023.04",
+                    "Dart / Flutter Developer / Futter Team Lead",
+                    "Several projects",
+                    'Support and upgrade existing cross platform app with ~1 million users.\nEstablish FRAUD defence for apps back end, add Google captha to app,\nMove huge project from flutter 1.22.5 to Flutter 2 (then 3) with NS,\nCreate new cross platform app with news feed from scratch, to stores',
+                  )),
+              InformationParagraph(
                   Image.asset('assets/img/safarico.png'),
                   AdaptiveText("SaFariCo"),
-                  workExperience(
-                      context,
-                      "2020.9 - now",
-                      "Dart / Flutter Developer",
-                      "SaFariCo app",
+                  workExperience(context, "2020.9 - now", "Dart / Flutter Developer", "SaFariCo app",
                       'Develop startup online app with backend from scratch.\nCreated backend solution using PostgreSQL & Conduit (Aqueduct).\nSuccessfully Develop from scratch new complex application which had following capabilities :\nRegister user, with cell number confirmation & OAuth 2.0.\nAllow user to select and store locations.\nStore user data on server.\nUser data sync with device.\nUser calendar with extended features.\nMulti language interface and features, syncronized with server db and with easy way to add languages without need of renewing app version solution.\netc')),
               InformationParagraph(
                   Image.asset('assets/img/koc.png'),
@@ -222,11 +209,7 @@ class DataProvider with ChangeNotifier {
                   ),
                   AdaptiveText("SOCAR"),
                   Column(children: [
-                    workExperience(
-                        context,
-                        "2018.3 - 2018.9",
-                        "Lead Drilling Engineer",
-                        "Azneft IB drilling projects",
+                    workExperience(context, "2018.3 - 2018.9", "Lead Drilling Engineer", "Azneft IB drilling projects",
                         "Different drilling related projects"),
                     workExperience(
                         context,
@@ -250,29 +233,13 @@ class DataProvider with ChangeNotifier {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      workExperience(
-                          context,
-                          "2010.9 - 2012.7",
-                          "Drilling Projects Engineer",
-                          "Drilling Projects Team",
+                      workExperience(context, "2010.9 - 2012.7", "Drilling Projects Engineer", "Drilling Projects Team",
                           "Variety of Drilling related projects, some of key project's are:\nConductor Steering tool developement (participated with subcontractors with an attempt to develop tool which would enable to turn conductor while driving it)\nDrill Test well on land for Chirag 2 (i was only drilling rep, and was responsible for successfull and safe drilling of shallow well on site)\nWorked and Maintained Azerbaijan RPU BtB process and RAPIDs.\nCreating Casing BOD's\nParticipated in Tender process and selecting Tubular Running service contractor\nDelivered comparison of a performance of equipment from different vendors, such as drill bits, reamers etc.\nDelivered “NPT Investigation” document"),
-                      workExperience(
-                          context,
-                          "2008.9 - 2010.9",
-                          "Planning / Operational Drilling Engineer",
-                          "Chirag",
+                      workExperience(context, "2008.9 - 2010.9", "Planning / Operational Drilling Engineer", "Chirag",
                           "Plan and Execute wells for Chirag platform"),
-                      workExperience(
-                          context,
-                          "2007.5 - 2008.9",
-                          "Offshore Drilling Engineer",
-                          "Chirag",
+                      workExperience(context, "2007.5 - 2008.9", "Offshore Drilling Engineer", "Chirag",
                           "Make sure all operations are in compliant with BP HSE standards\nEnsure all rig activities are performed safely and in cost effective manner.\nDIMS management, assist Night Sup to complete and send DDR\nSupervize cementing job, complete Report\nPrepare and submit all well operations reports in timely manner - leak off tests, casing\nMaintain inventory control\nPerform all calculations related to well operations, as an example but not limited to;\nhydraulics,\nLOT,\nkick sheet and kick tolerance,\ncasing tallies\ncementing,\nhole cleaning.\nCross check the calculations when it is required."),
-                      workExperience(
-                          context,
-                          "2006.9 - 2007.5",
-                          "Challange Drilling Engineer",
-                          "Istiglal",
+                      workExperience(context, "2006.9 - 2007.5", "Challange Drilling Engineer", "Istiglal",
                           "Working as Roustabaut, roughneck etc. as a part of BP challange program on Istiglal"),
                       workExperience(
                           context,
@@ -285,11 +252,7 @@ class DataProvider with ChangeNotifier {
               InformationParagraph(
                   Image.asset('assets/img/kcadeutag.png'),
                   AdaptiveText("KCA Deutag"),
-                  workExperience(
-                      context,
-                      "2005.3 - 2005.5",
-                      "Schoolar",
-                      "KCAD Schoolarship program",
+                  workExperience(context, "2005.3 - 2005.5", "Schoolar", "KCAD Schoolarship program",
                       "Was selected to participate in KCAD schoolar program with learning opportunities\nVisited KCAD and other several subcontractor’s facilities in Aberdeen")),
             ]),
       ];
@@ -323,13 +286,11 @@ class DataProvider with ChangeNotifier {
   }
 
   void openSubItem(int itemNumber, int subItemNumber) {
-    _items[itemNumber].list[subItemNumber].isOpen =
-        !_items[itemNumber].list[subItemNumber].isOpen;
+    _items[itemNumber].list[subItemNumber].isOpen = !_items[itemNumber].list[subItemNumber].isOpen;
     notifyListeners();
   }
 
-  Widget workExperience(BuildContext context, String dates, String position,
-      String asset, String data) {
+  Widget workExperience(BuildContext context, String dates, String position, String asset, String data) {
     return Align(
       alignment: Alignment.topLeft,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -355,7 +316,7 @@ class DataProvider with ChangeNotifier {
           data,
           // style: Theme.of(context).textTheme.bodyText1,
           textScaleFactor: MediaQuery.of(context).textScaleFactor,
-        )
+        ),
       ]),
     );
   }
@@ -368,8 +329,8 @@ class InformationParagraph {
   bool isOpen = true;
   bool isLeveled;
   List<InformationParagraph> list;
-  InformationParagraph(this.image, this.information, this.data,
-      {this.list, this.isLeveled = false});
+
+  InformationParagraph(this.image, this.information, this.data, {this.list, this.isLeveled = false});
 // set isOpen(bool isOpen) {
 //   _isOpen = isOpen;
 //   // notifyListeners();
@@ -380,9 +341,7 @@ class InformationParagraph {
 // }
 }
 
-Widget certificateOnTouchAlert(
-    BuildContext context, String certificateName, Image image,
-    {String url}) {
+Widget certificateOnTouchAlert(BuildContext context, String certificateName, Image image, {String url}) {
   return TextButton(
     onPressed: () {
       showDialog<void>(
@@ -393,13 +352,12 @@ Widget certificateOnTouchAlert(
             title: TextButton(
                 onPressed: () {
                   if (url != null) launch(url);
+                  // if (url != null) launchUrl(Uri.dataFromString(url));
                 },
                 child: AdaptiveText(certificateName)),
             content: Stack(children: [
               Center(child: CircularProgressIndicator()),
-              Center(
-                  child: SingleChildScrollView(
-                      child: InteractiveViewer(child: image))),
+              Center(child: SingleChildScrollView(child: InteractiveViewer(child: image))),
             ]),
             actions: <Widget>[
               TextButton(

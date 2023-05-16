@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:fab_circular_menu/fab_circular_menu.dart';
@@ -66,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage>
               child: Padding(
                 padding: const EdgeInsets.all(3.0),
                 child: AdaptiveText(
-                  "updated 29.09.21",
+                  "updated 09.05.23",
                   textScaleFactor: 0.67,
                 ),
               ),

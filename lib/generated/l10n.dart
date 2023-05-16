@@ -1,6 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -145,10 +146,10 @@ class S {
     );
   }
 
-  /// `Currently looking for Development / Consulting job opportunities for Flutter / Dart crossplatform applications, preferably with utilising my past Drilling experience.`
+  /// `Currently looking for Development / Consulting job opportunities for Flutter / Dart crossplatform applications.`
   String get statusData {
     return Intl.message(
-      'Currently looking for Development / Consulting job opportunities for Flutter / Dart crossplatform applications, preferably with utilising my past Drilling experience.',
+      'Currently looking for Development / Consulting job opportunities for Flutter / Dart crossplatform applications.',
       name: 'statusData',
       desc: '',
       args: [],
@@ -215,10 +216,10 @@ class S {
     );
   }
 
-  /// `Flutter\nDart\nConduit (ex Aqueduct Dart serverside framework)\nJavaScript\nES6\nTypeScript\nHTML5\nCSS\nXML\nYAML\nOOP\njQuery\nFirebase\nGit\nMicrosoft SQL\nPostgreSQL\nUbuntu\nApache2\nJSON\nKotlin\nRxJS\nJava\nMS Office`
+  /// `Flutter\nDart\nConduit (ex Aqueduct Dart serverside framework)\nAutoroute\nGraphQL\nFirebase\nRetrofit\nFreezed\nProvider\nRiverpod\nMWWM\nElementary\nLinter\nAnalitycs\nJavaScript\nES6\nTypeScript\nHTML5\nCSS\nXML\nYAML\nOOP\njQuery\nGit\nMicrosoft SQL\nPostgreSQL\nUbuntu\nApache2\nJSON\nKotlin\nRxJS\nJava\nMS Office`
   String get skillsData {
     return Intl.message(
-      'Flutter\nDart\nConduit (ex Aqueduct Dart serverside framework)\nJavaScript\nES6\nTypeScript\nHTML5\nCSS\nXML\nYAML\nOOP\njQuery\nFirebase\nGit\nMicrosoft SQL\nPostgreSQL\nUbuntu\nApache2\nJSON\nKotlin\nRxJS\nJava\nMS Office',
+      'Flutter\nDart\nConduit (ex Aqueduct Dart serverside framework)\nAutoroute\nGraphQL\nFirebase\nRetrofit\nFreezed\nProvider\nRiverpod\nMWWM\nElementary\nLinter\nAnalitycs\nJavaScript\nES6\nTypeScript\nHTML5\nCSS\nXML\nYAML\nOOP\njQuery\nGit\nMicrosoft SQL\nPostgreSQL\nUbuntu\nApache2\nJSON\nKotlin\nRxJS\nJava\nMS Office',
       name: 'skillsData',
       desc: '',
       args: [],
